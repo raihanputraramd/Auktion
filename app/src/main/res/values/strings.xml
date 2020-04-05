@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Auktion</string>
+    <string name="auktion">Auktion</string>
+    <string name="masuk_untuk_memulai">Masuk untuk memulai</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="masuk">Masuk</string>
+    <string name="admin">Admin</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="telepon">Telepon</string>
+    <string name="registrasi">Registrasi</string>
+</resources>

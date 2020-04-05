@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterOrLoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_registerOrLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:src="@drawable/app_intro_3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_auktion_loginOrRegister"
+        style="@style/txtHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/auktion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_registerOrLogin" />
+
+    <Button
+        android:id="@+id/btn_gotoRegister_loginOrRegister"
+        style="@style/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar sekarang"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_auktion_loginOrRegister" />
+
+    <Button
+        style="@style/btn"
+        android:id="@+id/btn_gotoLogin_loginOrRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/masuk"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_gotoRegister_loginOrRegister" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

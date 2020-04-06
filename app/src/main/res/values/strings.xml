@@ -9,4 +9,6 @@
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="telepon">Telepon</string>
     <string name="registrasi">Registrasi</string>
+    <string name="item_head">Televisi</string>
+    <string name="item_money">Rp.200.000,00</string>
 </resources>

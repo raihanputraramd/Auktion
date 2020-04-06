@@ -1,4 +1,4 @@
-package com.example.auktion;
+package com.example.auktion.StaticActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.auktion.LoginActivity;
+import com.example.auktion.R;
+import com.example.auktion.UserActivity.UserActivityRegister;
 
 public class RegisterOrLoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,11 +29,11 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_gotoLogin_loginOrRegister:
-                Intent iLogin = new Intent(RegisterOrLoginActivity.this, MainActivity.class);
+                Intent iLogin = new Intent(RegisterOrLoginActivity.this, LoginActivity.class);
                 startActivity(iLogin);
                 break;
             case R.id.btn_gotoRegister_loginOrRegister:
-                Intent iRegister = new Intent(RegisterOrLoginActivity.this, UserRegisterActivity.class);
+                Intent iRegister = new Intent(RegisterOrLoginActivity.this, UserActivityRegister.class);
                 startActivity(iRegister);
             default:
                 break;

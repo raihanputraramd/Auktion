@@ -1,4 +1,4 @@
-package com.example.auktion;
+package com.example.auktion.UserActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +9,10 @@ import androidx.room.Room;
 
 import com.example.auktion.Data.UserDAO;
 import com.example.auktion.Model.User;
-import com.example.auktion.Presenter.RegisterPresenter;
+import com.example.auktion.Presenter.UserUserRegisterPresenter;
+import com.example.auktion.R;
 import com.example.auktion.Utils.AppDatabase;
-import com.example.auktion.View.IRegisterView;
+import com.example.auktion.View.IUserRegisterView;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.android.material.textfield.TextInputLayout;
@@ -19,7 +20,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import es.dmoral.toasty.Toasty;
 import okhttp3.OkHttpClient;
 
-public class UserRegisterActivity extends AppCompatActivity implements IRegisterView {
+public class UserActivityRegister extends AppCompatActivity implements IUserRegisterView {
 
     private TextInputLayout edtUsername, edtPassword, edtNamaLengkap, edtTelepon;
     private Button btnRegister;
@@ -29,7 +30,7 @@ public class UserRegisterActivity extends AppCompatActivity implements IRegister
     private User user;
 
 
-    private RegisterPresenter registerPresenter;
+    private UserUserRegisterPresenter userRegisterPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class UserRegisterActivity extends AppCompatActivity implements IRegister
         inisialisasiStetho();
         inisialisasiDBRoom();
 
-        registerPresenter = new RegisterPresenter(this);
+        userRegisterPresenter = new UserUserRegisterPresenter(this);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,7 @@ public class UserRegisterActivity extends AppCompatActivity implements IRegister
                         edtPassword.getEditText().getText().toString(), edtNamaLengkap.getEditText().getText().toString(),
                         edtTelepon.getEditText().getText().toString());
 
-                registerPresenter.onRegister(edtUsername.getEditText().getText().toString().trim(),
+                userRegisterPresenter.onRegister(edtUsername.getEditText().getText().toString().trim(),
                         edtPassword.getEditText().getText().toString(), edtNamaLengkap.getEditText().getText().toString(),
                         edtTelepon.getEditText().getText().toString());
 

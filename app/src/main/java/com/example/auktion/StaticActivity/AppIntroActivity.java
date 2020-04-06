@@ -1,4 +1,4 @@
-package com.example.auktion;
+package com.example.auktion.StaticActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.auktion.Intro.SliderAdapter;
+import com.example.auktion.R;
 
 public class AppIntroActivity extends AppCompatActivity {
 

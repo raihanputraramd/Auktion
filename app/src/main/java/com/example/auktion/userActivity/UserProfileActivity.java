@@ -1,4 +1,4 @@
-package com.example.auktion.UserActivity;
+package com.example.auktion.userActivity;
 
 import android.os.Bundle;
 

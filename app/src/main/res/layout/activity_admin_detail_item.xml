@@ -4,6 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminDetailItemActivity">
+    tools:context=".userActivity.UserDetailItemActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_admin_detailItem"
+        style="@style/iv_detail_item"
+        android:src="@drawable/img_item"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@style/btn_back"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_admin_detailItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/bgShape"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_admin_detailItem">
+
+        <TextView
+            style="@style/txtNormal"
+            android:text="Mobil Avanza"
+            android:textSize="@dimen/_25ssp" />
+
+        <TextView
+            style="@style/txtHead.txtSub"
+            android:text="oleh Raihan putra Ramdhan" />
+
+        <TextView
+            style="@style/txtNormal"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Rp. 15.000.000,00"
+            android:textSize="@dimen/_18ssp" />
+
+        <TextView
+            style="@style/txtHead.txtSub"
+            android:layout_marginTop="@dimen/_19ssp"
+            android:text="20 - 12 - 2020"
+            android:textSize="@dimen/_20ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/bgShape"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_admin_detailItem">
+
+        <TextView
+            style="@style/txtNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Barang"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            style="@style/txtNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/_37sdp"
+            android:text="Mobil Bagus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            style="@style/txtHead.txtSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Dibuka"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_30sdp" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

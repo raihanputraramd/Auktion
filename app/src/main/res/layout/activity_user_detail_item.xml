@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity.UserDetailItemActivity">
+    tools:context=".userActivity.UserDetailItemActivity">
 
 
     <ImageView
-        android:id="@+id/iv_detail_item"
+        android:id="@+id/iv_admin_detailItem"
         style="@style/iv_detail_item"
         android:src="@drawable/img_item"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/detail_item"
+        android:id="@+id/linear_admin_detailItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_6sdp"
@@ -31,7 +31,7 @@
         android:padding="@dimen/_12sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_detail_item">
+        app:layout_constraintTop_toBottomOf="@id/iv_admin_detailItem">
 
         <TextView
             style="@style/txtNormal"
@@ -64,7 +64,7 @@
         android:padding="@dimen/_12sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detail_item">
+        app:layout_constraintTop_toBottomOf="@id/linear_admin_detailItem">
 
         <TextView
             style="@style/txtNormal"
@@ -90,6 +90,7 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <Button
+            android:layout_width="0dp"
             style="@style/btn_pasang_penawaran"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"

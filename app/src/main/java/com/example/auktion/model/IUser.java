@@ -1,4 +1,4 @@
-package com.example.auktion.Model;
+package com.example.auktion.model;
 
 public interface IUser {
     String getUsername();

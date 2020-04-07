@@ -126,4 +126,10 @@
         <item name="android:background">@drawable/bg_icon_profile</item>
     </style>
 
+    <style name="rv_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_36sdp</item>
+    </style>
+
 </resources>

@@ -1,7 +1,7 @@
-package com.example.auktion.Presenter;
+package com.example.auktion.presenter;
 
-import com.example.auktion.Model.User;
-import com.example.auktion.View.IUserRegisterView;
+import com.example.auktion.model.User;
+import com.example.auktion.view.IUserRegisterView;
 
 public class UserUserRegisterPresenter implements IUserRegisterPresenter {
 

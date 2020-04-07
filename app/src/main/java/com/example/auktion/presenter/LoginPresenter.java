@@ -1,7 +1,6 @@
-package com.example.auktion.Presenter;
+package com.example.auktion.presenter;
 
-import com.example.auktion.Model.User;
-import com.example.auktion.View.ILoginView;
+import com.example.auktion.view.ILoginView;
 
 public class LoginPresenter implements ILoginPresenter {
 

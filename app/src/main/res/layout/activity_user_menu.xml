@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity.UserMenuActivity">
+    tools:context=".userActivity.UserMenuActivity">
 
     <TextView
         android:id="@+id/tv_auktion_userMenu"
@@ -27,9 +27,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_userMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_36sdp"
+        style="@style/rv_item"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_auktion_userMenu"

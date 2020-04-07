@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity.UserProfileActivity">
+    tools:context=".userActivity.UserProfileActivity">
 
     <ImageButton
         style="@style/btn_back"
@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_user_profile"
+        android:id="@+id/iv_admin_profile"
         style="@style/ib_user"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_150sdp"
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_user_profile">
+        app:layout_constraintTop_toBottomOf="@id/iv_admin_profile">
 
         <TextView
             style="@style/txtHead.txtSub"

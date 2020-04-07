@@ -1,4 +1,4 @@
-package com.example.auktion.View;
+package com.example.auktion.view;
 
 public class IUserProfileView {
 }

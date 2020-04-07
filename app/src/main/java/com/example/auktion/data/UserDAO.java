@@ -1,4 +1,4 @@
-package com.example.auktion.Data;
+package com.example.auktion.data;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.auktion.Model.User;
+import com.example.auktion.model.User;
 
 import java.util.List;
 

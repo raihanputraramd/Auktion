@@ -1,4 +1,4 @@
-package com.example.auktion.Intro;
+package com.example.auktion.intro;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -48,14 +48,14 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (ConstraintLayout) object;
+        return view == object;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater layoutInflater = (LayoutInflater)
-                context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slider_layout, container, false);
 
         ImageView ivIntro = view.findViewById(R.id.iv_intro);

@@ -1,4 +1,4 @@
-package com.example.auktion.Data;
+package com.example.auktion.data;
 
 import androidx.room.Dao;
 

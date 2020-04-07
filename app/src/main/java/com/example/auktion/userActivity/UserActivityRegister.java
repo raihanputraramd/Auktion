@@ -1,4 +1,4 @@
-package com.example.auktion.UserActivity;
+package com.example.auktion.userActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,12 +7,12 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.auktion.Data.UserDAO;
-import com.example.auktion.Model.User;
-import com.example.auktion.Presenter.UserUserRegisterPresenter;
 import com.example.auktion.R;
-import com.example.auktion.Utils.AppDatabase;
-import com.example.auktion.View.IUserRegisterView;
+import com.example.auktion.data.UserDAO;
+import com.example.auktion.model.User;
+import com.example.auktion.presenter.UserUserRegisterPresenter;
+import com.example.auktion.utils.AppDatabase;
+import com.example.auktion.view.IUserRegisterView;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.android.material.textfield.TextInputLayout;

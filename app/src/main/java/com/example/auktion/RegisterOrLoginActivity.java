@@ -1,4 +1,4 @@
-package com.example.auktion.StaticActivity;
+package com.example.auktion;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.auktion.LoginActivity;
-import com.example.auktion.R;
-import com.example.auktion.UserActivity.UserActivityRegister;
+import com.example.auktion.userActivity.UserActivityRegister;
 
 public class RegisterOrLoginActivity extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.example.auktion.Utils;
+package com.example.auktion.utils;
 
 import android.content.Context;
 
@@ -6,8 +6,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.auktion.Data.UserDAO;
-import com.example.auktion.Model.User;
+import com.example.auktion.data.UserDAO;
+import com.example.auktion.model.User;
 
 @Database(entities = {User.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

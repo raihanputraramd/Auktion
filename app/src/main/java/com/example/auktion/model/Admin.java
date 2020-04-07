@@ -1,4 +1,4 @@
-package com.example.auktion.Model;
+package com.example.auktion.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

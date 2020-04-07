@@ -34,7 +34,7 @@
             android:padding="@dimen/_26sdp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_username_register"
+                android:id="@+id/edt_username_registerAdmin"
                 style="@style/edt_base"
                 android:layout_marginBottom="@dimen/_16sdp"
                 android:hint="@string/username">
@@ -46,7 +46,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_password_register"
+                android:id="@+id/edt_password_registerAdmin"
                 style="@style/edt_base"
                 android:layout_marginBottom="@dimen/_16sdp"
                 android:hint="@string/password">
@@ -58,7 +58,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_namaLengkap_register"
+                android:id="@+id/edt_namaLengkap_registerAdmin"
                 style="@style/edt_base"
                 android:layout_marginBottom="@dimen/_16sdp"
                 android:hint="@string/nama_lengkap">
@@ -70,7 +70,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/btn_register_admin"
                 style="@style/btn.register"
                 android:text="@string/registrasi" />
 

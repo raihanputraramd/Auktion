@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/ib_user_profile"
         style="@style/ib_user"
         android:layout_marginTop="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_17sdp"

@@ -5,5 +5,4 @@ public interface ILoginView {
 
     void onLoginError(String message);
 
-    void gotoRegister();
 }

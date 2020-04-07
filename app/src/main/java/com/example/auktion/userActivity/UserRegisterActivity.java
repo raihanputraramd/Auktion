@@ -10,7 +10,7 @@ import androidx.room.Room;
 import com.example.auktion.R;
 import com.example.auktion.data.UserDAO;
 import com.example.auktion.model.User;
-import com.example.auktion.presenter.UserUserRegisterPresenter;
+import com.example.auktion.presenter.UserRegisterPresenter;
 import com.example.auktion.utils.AppDatabase;
 import com.example.auktion.view.IUserRegisterView;
 import com.facebook.stetho.Stetho;
@@ -20,34 +20,32 @@ import com.google.android.material.textfield.TextInputLayout;
 import es.dmoral.toasty.Toasty;
 import okhttp3.OkHttpClient;
 
-public class UserActivityRegister extends AppCompatActivity implements IUserRegisterView {
+public class UserRegisterActivity extends AppCompatActivity implements IUserRegisterView {
 
     private TextInputLayout edtUsername, edtPassword, edtNamaLengkap, edtTelepon;
-    private Button btnRegister;
 
     private UserDAO userDAO;
 
     private User user;
 
-
-    private UserUserRegisterPresenter userRegisterPresenter;
+    private UserRegisterPresenter userRegisterPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
 
-        edtUsername = findViewById(R.id.edt_username_register);
-        edtPassword = findViewById(R.id.edt_password_register);
-        edtNamaLengkap = findViewById(R.id.edt_namaLengkap_register);
+        edtUsername = findViewById(R.id.edt_username_registerAdmin);
+        edtPassword = findViewById(R.id.edt_password_registerAdmin);
+        edtNamaLengkap = findViewById(R.id.edt_namaLengkap_registerAdmin);
         edtTelepon = findViewById(R.id.edt_telepon_register);
 
-        btnRegister = findViewById(R.id.btnRegister_user);
+        Button btnRegister = findViewById(R.id.btnRegister_user);
 
         inisialisasiStetho();
         inisialisasiDBRoom();
 
-        userRegisterPresenter = new UserUserRegisterPresenter(this);
+        userRegisterPresenter = new UserRegisterPresenter(this);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override

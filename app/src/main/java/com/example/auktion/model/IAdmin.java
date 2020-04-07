@@ -5,5 +5,5 @@ public interface IAdmin {
 
     String getPassword();
 
-//    int isValidData();
+    int isValidData();
 }

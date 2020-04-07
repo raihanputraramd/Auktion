@@ -13,7 +13,7 @@ import java.util.List;
 @Dao
 public interface UserDAO {
     @Query("SELECT * FROM user where username= :username and password= :password")
-    List<User> getAll(String username, String password);
+    List<User> getAllUser(String username, String password);
 
     @Insert
     void insertUser(User user);

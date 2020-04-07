@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivity.UserActivityRegister">
+    tools:context=".userActivity.UserRegisterActivity">
 
     <TextView
         style="@style/txtHead"
@@ -42,7 +42,7 @@
             android:padding="@dimen/_26sdp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_username_register"
+                android:id="@+id/edt_username_registerAdmin"
                 style="@style/edt_base"
                 android:hint="@string/username">
 
@@ -53,7 +53,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_password_register"
+                android:id="@+id/edt_password_registerAdmin"
                 style="@style/edt_base"
                 android:hint="@string/password">
 
@@ -64,7 +64,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_namaLengkap_register"
+                android:id="@+id/edt_namaLengkap_registerAdmin"
                 style="@style/edt_base"
                 android:hint="@string/nama_lengkap">
 

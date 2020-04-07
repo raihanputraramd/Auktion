@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.auktion.userActivity.UserActivityRegister;
+import com.example.auktion.userActivity.UserRegisterActivity;
 
 public class RegisterOrLoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,7 +31,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
                 startActivity(iLogin);
                 break;
             case R.id.btn_gotoRegister_loginOrRegister:
-                Intent iRegister = new Intent(RegisterOrLoginActivity.this, UserActivityRegister.class);
+                Intent iRegister = new Intent(RegisterOrLoginActivity.this, UserRegisterActivity.class);
                 startActivity(iRegister);
             default:
                 break;

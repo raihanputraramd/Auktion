@@ -42,9 +42,9 @@ public class AppIntroActivity extends AppCompatActivity {
 
             } else {
                 tvNext.setEnabled(true);
-                tvNext.setOnClickListener(onClickListener());
                 tvBack.setEnabled(true);
                 tvBack.setVisibility(View.VISIBLE);
+                tvNext.setOnClickListener(onClickListener());
             }
         }
 
@@ -109,6 +109,7 @@ public class AppIntroActivity extends AppCompatActivity {
     private View.OnClickListener onClickListener() {
         Intent intent = new Intent(AppIntroActivity.this, RegisterOrLoginActivity.class);
         startActivity(intent);
+        finish();
         return null;
     }
 }

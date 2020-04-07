@@ -3,11 +3,11 @@ package com.example.auktion.presenter;
 import com.example.auktion.model.User;
 import com.example.auktion.view.IUserRegisterView;
 
-public class UserUserRegisterPresenter implements IUserRegisterPresenter {
+public class UserRegisterPresenter implements IUserRegisterPresenter {
 
     IUserRegisterView iUserRegisterView;
 
-    public UserUserRegisterPresenter(IUserRegisterView iUserRegisterView) {
+    public UserRegisterPresenter(IUserRegisterView iUserRegisterView) {
         this.iUserRegisterView = iUserRegisterView;
     }
 

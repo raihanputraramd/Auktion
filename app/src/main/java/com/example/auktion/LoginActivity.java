@@ -1,6 +1,8 @@
 package com.example.auktion;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -8,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.auktion.presenter.ILoginPresenter;
 import com.example.auktion.presenter.LoginPresenter;
+import com.example.auktion.userActivity.UserMenuActivity;
 import com.example.auktion.view.ILoginView;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -29,6 +32,14 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
 
         loginPresenter = new LoginPresenter(this);
 
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, UserMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
 //        btnLogin.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -49,9 +60,4 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
                 Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void gotoRegister() {
-//        Intent intent = new Intent(MainActivity.class, RegisterActivity.class);
-//        startActivity(intent);
-    }
 }

@@ -17,15 +17,16 @@
         <activity android:name=".userActivity.UserDetailItemActivity" />
         <activity android:name=".userActivity.UserMenuActivity" />
         <activity android:name=".RegisterOrLoginActivity" />
-        <activity android:name=".adminActivity.AdminRegisterActivity" />
-        <activity android:name=".userActivity.UserActivityRegister" />
-        <activity android:name=".AppIntroActivity">
+        <activity android:name=".adminActivity.AdminRegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".userActivity.UserRegisterActivity" />
+        <activity android:name=".AppIntroActivity" />
+
         <activity android:name=".LoginActivity" />
 
         <meta-data

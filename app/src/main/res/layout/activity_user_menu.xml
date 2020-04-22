@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivity.UserMenuActivity">
+    tools:context=".activityUser.UserMenuActivity">
 
     <TextView
         android:id="@+id/tv_auktion_userMenu"
@@ -24,7 +24,8 @@
         android:layout_marginEnd="@dimen/_17sdp"
         android:src="@drawable/ic_account"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_userMenu"
@@ -33,6 +34,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_auktion_userMenu"
         tools:listitem="@layout/item_user_menu" />
+
+    <TextView
+        android:id="@+id/tv_warning_userMenu"
+        style="@style/txtHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/belum_ada_data_mohon_memberitahukan_admin_atau_petugas_untuk_pengimputan"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_auktion_userMenu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

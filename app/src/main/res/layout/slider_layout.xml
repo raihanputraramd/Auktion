@@ -14,7 +14,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_intro_1" />
+        app:srcCompat="@drawable/app_intro_1"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/tv_head_intro"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_60sdp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Jual beli"
+        android:text="@string/jual_beli"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/textColor"
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30sdp"
         android:fontFamily="@font/roboto"
-        android:text="persetujuan saling mengikat antara penjual, yakni pihak yang menyerahkan barang, dan pembeli sebagai pihak yang membayar harga barang yang dijual"
+        android:text="@string/persetujuan_saling_mengikat_antara_penjual_yakni_pihak_yang_menyerahkan_barang_dan_pembeli_sebagai_pihak_yang_membayar_harga_barang_yang_dijual"
         android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textSize="20sp"

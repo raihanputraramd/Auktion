@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.auktion.userActivity.UserRegisterActivity;
+import com.example.auktion.activityUser.UserRegisterActivity;
 
 public class RegisterOrLoginActivity extends AppCompatActivity implements View.OnClickListener {
 

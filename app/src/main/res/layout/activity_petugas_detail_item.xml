@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityPetugas.PetugasDetailItemActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_admin_detailItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgShape"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="206dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_petugasDetailItem"
+            style="@style/btn_back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/tv_namaBarang_petugasDetailItem"
+            style="@style/txtNormal"
+            android:layout_marginTop="@dimen/_24sdp"
+            tools:text="Mobil Avanza"
+            android:textSize="@dimen/_25ssp" />
+
+        <TextView
+            android:id="@+id/tv_hargaBarang_petugasDetailItem"
+            style="@style/txtNormal"
+            android:layout_marginTop="@dimen/_19sdp"
+            tools:text="Rp. 15.000.000,00"
+            android:textSize="@dimen/_18ssp" />
+
+        <TextView
+            android:id="@+id/tv_tanggalBarang_petugasDetailItem"
+            style="@style/txtHead.txtSub"
+            android:layout_marginTop="@dimen/_19ssp"
+            tools:text="20 - 12 - 2020"
+            android:textSize="@dimen/_20ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/bgShape"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_admin_detailItem">
+
+        <TextView
+            style="@style/txtNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_barang"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:id="@+id/tv_deskripsiBarang_petugasDetailItem"
+            style="@style/txtNormal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:ellipsize="end"
+            android:maxHeight="@dimen/_37sdp"
+            tools:text="Mobil Bagus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <Button
+            android:id="@+id/btn_bukaLelang_petugasDetailItem"
+            style="@style/btn_pasang_penawaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/buka_lelang" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

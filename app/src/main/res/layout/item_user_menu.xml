@@ -2,9 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/_6sdp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_userMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_26sdp"
@@ -17,35 +20,36 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/_10sdp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/img_item"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:padding="@dimen/_6sdp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@drawable/bg_register"
                 android:orientation="vertical"
-                android:padding="@dimen/_6sdp"
+                android:padding="@dimen/_3sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent">
 
                 <TextView
+                    android:id="@+id/tv_namaBarang_userMenu"
                     style="@style/item_desc"
-                    android:text="@string/item_head" />
+                    tools:text="@string/item_head"
+                    android:layout_marginBottom="@dimen/_15sdp"/>
 
                 <TextView
+                    android:id="@+id/tv_hargaBarang_userMenu"
                     style="@style/item_desc.money"
-                    android:text="@string/item_money" />
+                    tools:text="@string/item_money"
+                    android:layout_marginBottom="@dimen/_15sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_tanggalBarang_userMenu"
+                    style="@style/item_desc.money"
+                    tools:text="20 - 12 - 2019"
+                    android:layout_marginBottom="@dimen/_15sdp"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

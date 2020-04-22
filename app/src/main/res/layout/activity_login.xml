@@ -59,17 +59,19 @@
                 android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/tv_gotoRegister_login"
                 style="@style/txtNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_56sdp"
                 android:layout_marginBottom="@dimen/_36sdp"
-                android:text="Belum punya Akun? Daftar" />
+                android:text="@string/belum_punya_akun_daftar" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

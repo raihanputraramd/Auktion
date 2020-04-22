@@ -6,17 +6,19 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "admin")
-public class Admin implements IAdmin {
+public class Admin implements IAdmin, Serializable {
 
     @PrimaryKey(autoGenerate = true)
-    int id_petugas;
+    private int id_petugas;
     @ColumnInfo(name = "nama_petugas")
-    String nama_petugas;
+    private String nama_petugas;
     @ColumnInfo(name = "username")
-    String username;
+    private String username;
     @ColumnInfo(name = "password")
-    String password;
+    private String password;
 
     public Admin(String nama_petugas, String username, String password) {
         this.nama_petugas = nama_petugas;
@@ -42,22 +44,6 @@ public class Admin implements IAdmin {
         this.password = password;
     }
 
-    @Override
-    public int isValidData() {
-        if (TextUtils.isEmpty(getUsername()) && TextUtils.isEmpty(getPassword())
-                && TextUtils.isEmpty(getNama_petugas())) {
-            return 1;
-        } else if (TextUtils.isEmpty(getUsername())) {
-            return 2;
-        } else if (TextUtils.isEmpty(getPassword())) {
-            return 3;
-        } else if (TextUtils.isEmpty(getNama_petugas())) {
-            return 4;
-        } else {
-            return 0;
-        }
-    }
-
     public int getId_petugas() {
         return id_petugas;
     }
@@ -72,5 +58,21 @@ public class Admin implements IAdmin {
 
     public void setNama_petugas(String nama_petugas) {
         this.nama_petugas = nama_petugas;
+    }
+
+    @Override
+    public int isValidData() {
+        if (TextUtils.isEmpty(getUsername()) && TextUtils.isEmpty(getPassword())
+                && TextUtils.isEmpty(getNama_petugas())) {
+            return 1;
+        } else if (TextUtils.isEmpty(getUsername())) {
+            return 2;
+        } else if (TextUtils.isEmpty(getPassword())) {
+            return 3;
+        } else if (TextUtils.isEmpty(getNama_petugas())) {
+            return 4;
+        } else {
+            return 0;
+        }
     }
 }

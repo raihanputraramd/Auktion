@@ -4,60 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivity.UserDetailItemActivity">
+    tools:context=".activityUser.UserDetailItemActivity">
 
-
-    <ImageView
-        android:id="@+id/iv_admin_detailItem"
-        style="@style/iv_detail_item"
-        android:src="@drawable/img_item"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        style="@style/btn_back"
-        android:src="@drawable/ic_back"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linear_admin_detailItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_6sdp"
         android:background="@color/bgShape"
         android:orientation="vertical"
         android:padding="@dimen/_12sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_admin_detailItem">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="206dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_adminDetailBarang"
+            style="@style/btn_back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/back" />
 
         <TextView
+            android:id="@+id/tv_namabarang_adminDetailItem"
             style="@style/txtNormal"
-            android:text="Mobil Avanza"
+            android:layout_marginTop="@dimen/_24sdp"
+            tools:text="Mobil Avanza"
             android:textSize="@dimen/_25ssp" />
 
         <TextView
-            style="@style/txtHead.txtSub"
-            android:text="oleh Raihan putra Ramdhan" />
-
-        <TextView
+            android:id="@+id/tv_hargaBarang_adminDetailItem"
             style="@style/txtNormal"
-            android:layout_marginTop="@dimen/_6sdp"
-            android:text="Rp. 15.000.000,00"
+            android:layout_marginTop="@dimen/_19sdp"
+            tools:text="Rp. 15.000.000,00"
             android:textSize="@dimen/_18ssp" />
 
         <TextView
+            android:id="@+id/tv_tanggalBarang_adminDetailItem"
             style="@style/txtHead.txtSub"
             android:layout_marginTop="@dimen/_19ssp"
-            android:text="20 - 12 - 2020"
+            tools:text="20 - 12 - 2020"
             android:textSize="@dimen/_20ssp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_200sdp"
         android:layout_marginTop="@dimen/_6sdp"
         android:background="@color/bgShape"
         android:orientation="vertical"
@@ -70,15 +64,17 @@
             style="@style/txtNormal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deskripsi Barang"
+            tools:text="Deskripsi Barang"
             android:textSize="@dimen/_22ssp" />
 
         <TextView
+            android:id="@+id/tv_deskripsiBarang_adminDetailBarang"
             style="@style/txtNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxHeight="@dimen/_37sdp"
-            android:text="Mobil Bagus" />
+            android:layout_height="@dimen/_80sdp"
+            android:ellipsize="end"
+            android:maxHeight="@dimen/_60sdp"
+            tools:text="Mobil Bagus" />
     </LinearLayout>
 
     <LinearLayout
@@ -92,13 +88,14 @@
 
 
         <TextView
+            android:id="@+id/tv_status_adminDetailBarang"
             style="@style/txtHead.txtSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="@dimen/_10sdp"
             android:gravity="center"
-            android:text="Dibuka"
+            tools:text="Dibuka"
             android:textAllCaps="true"
             android:textSize="@dimen/_30sdp" />
     </LinearLayout>

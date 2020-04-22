@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBarangActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back_addBarang"
+        style="@style/btn_back"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+    <TextView
+        style="@style/txtHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tambah_barang"
+        android:textSize="@dimen/_26ssp"
+        app:layout_constraintBottom_toTopOf="@id/cv_addBarang"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back_addBarang" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_addBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bgShape"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_26sdp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_nama_addBarang"
+                style="@style/edt_base"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:hint="@string/nama_barang">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_harga_addBarang"
+                style="@style/edt_base"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:hint="@string/harga_barang">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/edt_tgl_addBarang"
+                style="@style/btn.register.mini"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:text="@string/tanggal_terakhir_menawar"
+                android:textAlignment="center"
+                android:textSize="@dimen/_20ssp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_deskripsi_addBarang"
+                style="@style/edt_base"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:hint="@string/deskripsi_barang">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_konfirmasi_addBarang"
+                style="@style/btn.register"
+                android:text="@string/konfirmasi" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

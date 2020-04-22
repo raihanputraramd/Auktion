@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".RegisterOrLoginActivity">
 
     <ImageView
@@ -15,7 +14,8 @@
         android:src="@drawable/app_intro_3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/tv_auktion_loginOrRegister"
@@ -33,7 +33,7 @@
         style="@style/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Daftar sekarang"
+        android:text="@string/daftar_sekarang"
         android:textSize="@dimen/_18ssp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

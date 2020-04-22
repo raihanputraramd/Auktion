@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivity.UserRegisterActivity">
+    tools:context=".activityUser.UserRegisterActivity">
 
     <TextView
         style="@style/txtHead"
@@ -14,16 +14,6 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/auktion"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        style="@style/txtHead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_26sdp"
-        android:text="@string/admin"
-        android:textSize="@dimen/_16ssp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -42,7 +32,7 @@
             android:padding="@dimen/_26sdp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_username_registerAdmin"
+                android:id="@+id/edt_username_registerUser"
                 style="@style/edt_base"
                 android:hint="@string/username">
 
@@ -53,18 +43,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_password_registerAdmin"
+                android:id="@+id/edt_password_registerUser"
                 style="@style/edt_base"
                 android:hint="@string/password">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_namaLengkap_registerAdmin"
+                android:id="@+id/edt_namaLengkap_registerUser"
                 style="@style/edt_base"
                 android:hint="@string/nama_lengkap">
 
@@ -75,13 +66,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_telepon_register"
+                android:id="@+id/edt_telepon_registerUser"
                 style="@style/edt_base"
                 android:hint="@string/telepon">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,12 +86,21 @@
                 app:layout_constraintTop_toBottomOf="@id/cvLogin" />
 
             <TextView
+                android:id="@+id/tv_goToLogin_registerUser"
                 style="@style/txtNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_36sdp"
-                android:layout_marginBottom="@dimen/_36sdp"
-                android:text="Sudah punya Akun? Masuk"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:text="@string/sudah_punya_akun_masuk"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_goToRegister_registerUser"
+                style="@style/txtNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registrasi_admin"
                 android:textAlignment="center" />
 
         </LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tv_barang_petugasPendataan"
+        style="@style/txtHead.txtSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="televisi"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_harga_petugasPendataan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_harga_petugasPendataan"
+        style="@style/txtHead.txtSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="rp.200.000,00"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_barang_petugasPendataan"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/textColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_barang_petugasPendataan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

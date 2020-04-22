@@ -31,7 +31,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:text="Kembali"
+        android:text="@string/kembali"
         android:visibility="invisible" />
 
     <TextView
@@ -43,6 +43,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:text="Selanjutnya" />
+        android:text="@string/selanjutnya" />
 
 </RelativeLayout>

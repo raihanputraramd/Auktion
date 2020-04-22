@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivity.UserProfileActivity">
+    tools:context=".activityUser.UserProfileActivity">
 
     <ImageButton
         style="@style/btn_back"
+        android:contentDescription="TODO"
         android:src="@drawable/ic_back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -18,6 +19,7 @@
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_150sdp"
         android:layout_marginTop="@dimen/_50sdp"
+        android:contentDescription="TODO"
         android:padding="@dimen/_30sdp"
         android:src="@drawable/ic_account"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@id/iv_admin_profile">
 
         <TextView
+            android:id="@+id/tv_username_adminProfile"
             style="@style/txtHead.txtSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +48,7 @@
             android:textSize="@dimen/_20ssp" />
 
         <TextView
+            android:id="@+id/tv_nama_adminProfile"
             style="@style/txtHead.txtSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,18 +61,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
-            android:text="08156210381"
-            android:textSize="@dimen/_20ssp" />
-
-        <TextView
-            style="@style/txtHead.txtSub"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
             android:text="@string/admin"
             android:textSize="@dimen/_20ssp" />
 
         <Button
+            android:id="@+id/btn_logOut_adminProfile"
             style="@style/btn_pasang_penawaran"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -6,8 +6,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "user")
-public class User implements IUser {
+public class User implements IUser, Serializable {
 
     @PrimaryKey(autoGenerate = true)
     int id_user;

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.auktion">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,25 +13,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adminActivity.AdminPendataanBarangActivity" />
-        <activity android:name=".adminActivity.AdminDetailItemActivity" />
-        <activity android:name=".adminActivity.AdminProfileActivity" />
-        <activity android:name=".adminActivity.AdminMenuActivity" />
-        <activity android:name=".userActivity.UserProfileActivity" />
-        <activity android:name=".userActivity.UserDetailItemActivity" />
-        <activity android:name=".userActivity.UserMenuActivity" />
-        <activity android:name=".RegisterOrLoginActivity" />
-        <activity android:name=".adminActivity.AdminRegisterActivity">
+
+        <activity
+            android:name=".AppIntroActivity"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity android:name=".AddBarangActivity">
+
+        </activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".userActivity.UserRegisterActivity" />
-        <activity android:name=".AppIntroActivity" />
+        <activity android:name=".RegisterOrLoginActivity" />
 
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".activityPetugas.PetugasMenuActivity">
+
+        </activity>
+        <activity android:name=".activityPetugas.PetugasDetailItemActivity" />
+        <activity android:name=".PendataanBarangActivity">
+
+        </activity>
+
+        <activity android:name=".activityAdmin.AdminMenuActivity">
+
+        </activity>
+        <activity android:name=".activityAdmin.AdminDetailItemActivity" />
+        <activity android:name=".activityAdmin.AdminProfileActivity" />
+        <activity android:name=".activityAdmin.AdminRegisterActivity" />
+
+        <activity android:name=".activityUser.UserMenuActivity">
+
+        </activity>
+        <activity android:name=".activityUser.UserProfileActivity" />
+        <activity android:name=".activityUser.UserDetailItemActivity" />
+        <activity android:name=".activityUser.UserRegisterActivity">
+
+        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"

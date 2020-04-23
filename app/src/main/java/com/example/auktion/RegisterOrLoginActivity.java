@@ -27,11 +27,13 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_gotoLogin_loginOrRegister:
-                Intent iLogin = new Intent(RegisterOrLoginActivity.this, LoginActivity.class);
+                Intent iLogin = new Intent(RegisterOrLoginActivity.this,
+                        LoginActivity.class);
                 startActivity(iLogin);
                 break;
             case R.id.btn_gotoRegister_loginOrRegister:
-                Intent iRegister = new Intent(RegisterOrLoginActivity.this, UserRegisterActivity.class);
+                Intent iRegister = new Intent(RegisterOrLoginActivity.this,
+                        UserRegisterActivity.class);
                 startActivity(iRegister);
             default:
                 break;

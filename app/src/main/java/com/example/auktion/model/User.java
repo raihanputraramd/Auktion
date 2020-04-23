@@ -12,14 +12,19 @@ import java.io.Serializable;
 public class User implements IUser, Serializable {
 
     @PrimaryKey(autoGenerate = true)
+    private
     int id_user;
     @ColumnInfo(name = "nama_lengkap")
+    private
     String nama_lengkap;
     @ColumnInfo(name = "username")
+    private
     String username;
     @ColumnInfo(name = "password")
+    private
     String password;
     @ColumnInfo(name = "telp")
+    private
     String telp;
 
     public User(String nama_lengkap, String username, String password, String telp) {

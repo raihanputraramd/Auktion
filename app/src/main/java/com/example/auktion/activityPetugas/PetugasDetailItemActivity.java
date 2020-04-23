@@ -74,18 +74,20 @@ public class PetugasDetailItemActivity extends AppCompatActivity {
                         int statusBarang = barang.getStatus();
                         if (statusBarang == 1) {
                             isOpenForLelang = 0;
-                            btnSetStatus.setText("Ditutup");
+                            btnSetStatus.setText(R.string.ditutup);
                             Toasty.success(PetugasDetailItemActivity.this,
                                     "Berhasil Merubah Status Barang Ke Ditutup",
                                     Toasty.LENGTH_SHORT).show();
-                            database.getBarangDAO().updateStatus(isOpenForLelang, barang.getId_barang());
+                            database.getBarangDAO().updateStatus(isOpenForLelang,
+                                    barang.getId_barang());
                         } else {
                             isOpenForLelang = 1;
-                            btnSetStatus.setText("Dibuka");
+                            btnSetStatus.setText(R.string.dibuka);
                             Toasty.success(PetugasDetailItemActivity.this,
                                     "Berhasil Merubah Status Barang Ke Dibuka",
                                     Toasty.LENGTH_SHORT).show();
-                            database.getBarangDAO().updateStatus(isOpenForLelang, barang.getId_barang());
+                            database.getBarangDAO().updateStatus(isOpenForLelang,
+                                    barang.getId_barang());
                         }
                     }
                 })
@@ -101,9 +103,9 @@ public class PetugasDetailItemActivity extends AppCompatActivity {
     private void statusBarang() {
         int statusBarang = barang.getStatus();
         if (statusBarang == 1) {
-            btnSetStatus.setText("Dibuka");
+            btnSetStatus.setText(R.string.dibuka);
         } else if (statusBarang == 0) {
-            btnSetStatus.setText("Ditutup");
+            btnSetStatus.setText(R.string.ditutup);
         }
     }
 

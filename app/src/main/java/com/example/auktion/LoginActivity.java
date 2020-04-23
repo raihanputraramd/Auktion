@@ -1,6 +1,5 @@
 package com.example.auktion;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import androidx.room.Room;
 import com.example.auktion.activityAdmin.AdminMenuActivity;
 import com.example.auktion.activityPetugas.PetugasMenuActivity;
 import com.example.auktion.activityUser.UserMenuActivity;
-import com.example.auktion.activityUser.UserProfileActivity;
 import com.example.auktion.activityUser.UserRegisterActivity;
 import com.example.auktion.model.Admin;
 import com.example.auktion.model.User;

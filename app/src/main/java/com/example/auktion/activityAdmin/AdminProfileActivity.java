@@ -25,6 +25,7 @@ public class AdminProfileActivity extends AppCompatActivity {
         admin = (Admin) getIntent().getSerializableExtra("adminDetailProfile");
 
         checkData();
+
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

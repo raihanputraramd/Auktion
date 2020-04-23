@@ -35,7 +35,6 @@ public class UserDetailItemActivity extends AppCompatActivity {
     private Button btnPasangPenawaran;
     private Barang barang;
     private AppDatabase database;
-    private int statusBarang;
 
     public static Intent getActIntent(Activity activity) {
         return new Intent(activity, UserDetailItemActivity.class);
@@ -77,13 +76,13 @@ public class UserDetailItemActivity extends AppCompatActivity {
     }
 
     private void checkStatus() {
-        statusBarang = barang.getStatus();
+        int statusBarang = barang.getStatus();
         if (statusBarang == 1) {
-            tvStatusBarang.setText("Dibuka");
+            tvStatusBarang.setText(R.string.dibuka);
             btnPasangPenawaran.setClickable(true);
         } else if (statusBarang == 0) {
-            tvStatusBarang.setText("Ditutup");
-            btnPasangPenawaran.setText("Tidak Dapat Menawar");
+            tvStatusBarang.setText(R.string.ditutup);
+            btnPasangPenawaran.setText(R.string.tidak_dapat_menawar);
             btnPasangPenawaran.setClickable(false);
         }
     }

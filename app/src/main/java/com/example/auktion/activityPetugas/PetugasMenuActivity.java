@@ -31,10 +31,6 @@ public class PetugasMenuActivity extends AppCompatActivity {
     private FloatingActionButton fabMain;
     private FloatingActionButton fabPendataan;
     private FloatingActionButton fabLogOut;
-    private Animation fabOpen;
-    private Animation fabClose;
-    private Animation rotateForward;
-    private Animation rotateBackward;
     private RecyclerView rvPetugasMenu;
     private TextView tvFabPendataanBarang;
     private TextView tvFabLogOut;
@@ -82,13 +78,13 @@ public class PetugasMenuActivity extends AppCompatActivity {
     }
 
     private void animateFab() {
-        fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open);
-        fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close);
-        rotateForward = AnimationUtils.loadAnimation(this, R.anim.rotate_forward);
-        rotateBackward = AnimationUtils.loadAnimation(this, R.anim.rotate_backward);
+        Animation fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open);
+        Animation fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close);
+        Animation rotateForward = AnimationUtils.loadAnimation(this, R.anim.rotate_forward);
+        Animation rotateBackward = AnimationUtils.loadAnimation(this, R.anim.rotate_backward);
 
         if (isOpen) {
-            fabMain.startAnimation(rotateForward);
+            fabMain.startAnimation(rotateBackward);
             fabPendataan.startAnimation(fabClose);
             fabLogOut.startAnimation(fabClose);
             fabPendataan.setClickable(false);
@@ -137,10 +133,6 @@ public class PetugasMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(PetugasMenuActivity.this,
                 PendataanBarangActivity.class);
         startActivity(intent);
-    }
-
-    private void generateLaporan() {
-
     }
 
     private void checkDataBarang(ArrayList<Barang> barangArrayList) {

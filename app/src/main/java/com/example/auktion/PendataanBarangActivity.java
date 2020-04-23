@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.auktion.activityPetugas.adapter.PetugasPendataanBarangAdapter;
 import com.example.auktion.model.Barang;
@@ -24,9 +23,6 @@ public class PendataanBarangActivity extends AppCompatActivity {
     private RecyclerView rvPetugasPendataanBarang;
     private ImageButton ibBack;
     private FloatingActionButton fabAddItem;
-    private SwipeRefreshLayout swipeRefreshLayout;
-
-    private PetugasPendataanBarangAdapter adapter;
 
     private ArrayList<Barang> list;
     private AppDatabase database;
@@ -60,7 +56,6 @@ public class PendataanBarangActivity extends AppCompatActivity {
         rvPetugasPendataanBarang = findViewById(R.id.rv_petugas_petugasPendataanBarang);
         ibBack = findViewById(R.id.ib_petugas_petugasPendataanBarang);
         fabAddItem = findViewById(R.id.fab_addBarang_petugasPendataanBarang);
-        swipeRefreshLayout = findViewById(R.id.sw_layout);
     }
 
     private void gotoAddBarang() {
@@ -80,7 +75,7 @@ public class PendataanBarangActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         rvPetugasPendataanBarang.setLayoutManager(linearLayoutManager);
         rvPetugasPendataanBarang.setHasFixedSize(true);
-        adapter = new PetugasPendataanBarangAdapter(PendataanBarangActivity.this,
+        PetugasPendataanBarangAdapter adapter = new PetugasPendataanBarangAdapter(PendataanBarangActivity.this,
                 barangArrayList);
         adapter.notifyDataSetChanged();
         rvPetugasPendataanBarang.setAdapter(adapter);

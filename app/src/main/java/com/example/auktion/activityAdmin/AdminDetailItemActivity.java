@@ -8,11 +8,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import com.example.auktion.R;
 import com.example.auktion.model.Barang;
-import com.example.auktion.utils.AppDatabase;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 
@@ -23,9 +21,6 @@ public class AdminDetailItemActivity extends AppCompatActivity {
     private TextView tvNamaBarang, tvTanggalBarang, tvHargaBarang, tvDeskripsiBarang, tvStatusBarang;
     private ImageButton ibBack;
     private Barang barang;
-    private AppDatabase database;
-
-    private int statusBarang;
 
     public static Intent getActIntent(Activity activity) {
         return new Intent(activity, AdminDetailItemActivity.class);
@@ -36,7 +31,6 @@ public class AdminDetailItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_detail_item);
         initId();
-        initRoom();
         initStetho();
 
 
@@ -62,11 +56,11 @@ public class AdminDetailItemActivity extends AppCompatActivity {
     }
 
     private void checkStatus() {
-        statusBarang = barang.getStatus();
+        int statusBarang = barang.getStatus();
         if (statusBarang == 1) {
-             tvStatusBarang.setText("Dibuka");
+            tvStatusBarang.setText(R.string.dibuka);
         } else if (statusBarang == 0) {
-            tvStatusBarang.setText("Ditutup");
+            tvStatusBarang.setText(R.string.ditutup);
         }
     }
 
@@ -87,10 +81,4 @@ public class AdminDetailItemActivity extends AppCompatActivity {
 
     }
 
-    private void initRoom() {
-        database = Room.databaseBuilder(this, AppDatabase.class,
-                "dbLelang.db")
-                .allowMainThreadQueries()
-                .build();
-    }
 }

@@ -50,11 +50,10 @@ public class AdminMenuActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         list.addAll(Arrays.asList(database.getBarangDAO().selectAllBarang()));
-//        list.addAll(DataTest.getListData());
 
         checkDataBarang(list);
-
         showRecyclerView(list);
+
         fabMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +81,7 @@ public class AdminMenuActivity extends AppCompatActivity {
         Animation rotateBackward = AnimationUtils.loadAnimation(this, R.anim.rotate_backward);
 
         if (isOpen) {
-            fabMain.startAnimation(rotateForward);
+            fabMain.startAnimation(rotateBackward);
             fabProfile.startAnimation(fabClose);
             fabPendataan.startAnimation(fabClose);
             tvFabProfile.startAnimation(fabClose);

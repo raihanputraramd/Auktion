@@ -56,8 +56,10 @@ public class UserMenuAdapter extends RecyclerView.Adapter<UserMenuAdapter.UserMe
 
             @Override
             public void onClick(View v) {
-                Barang barangs = database.getBarangDAO().selectBarangDetail(listBarang.get(position).getId_barang());
-                context.startActivity(UserDetailItemActivity.getActIntent((Activity) context).putExtra("data",barangs));
+                Barang barangs = database.getBarangDAO()
+                        .selectBarangDetail(listBarang.get(position).getId_barang());
+                context.startActivity(UserDetailItemActivity.getActIntent((Activity) context)
+                        .putExtra("data", barangs));
             }
         });
     }

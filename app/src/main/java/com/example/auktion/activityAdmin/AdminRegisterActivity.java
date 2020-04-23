@@ -11,11 +11,11 @@ import androidx.room.Room;
 
 import com.example.auktion.LoginActivity;
 import com.example.auktion.R;
+import com.example.auktion.activityAdmin.presenter.AdminRegisterPresenter;
+import com.example.auktion.activityUser.view.IUserRegisterView;
 import com.example.auktion.data.AdminDAO;
 import com.example.auktion.model.Admin;
-import com.example.auktion.activityAdmin.presenter.AdminRegisterPresenter;
 import com.example.auktion.utils.AppDatabase;
-import com.example.auktion.activityUser.view.IUserRegisterView;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.android.material.textfield.TextInputLayout;
@@ -27,7 +27,7 @@ public class AdminRegisterActivity extends AppCompatActivity implements IUserReg
 
     private TextInputLayout edtUsername, edtPassword, edtNamaLengkap;
 
-    private TextView tvGoToLogin;
+    private String zeroData = "";
 
     private AdminDAO adminDAO;
 
@@ -43,7 +43,7 @@ public class AdminRegisterActivity extends AppCompatActivity implements IUserReg
         edtUsername = findViewById(R.id.edt_username_registerUser);
         edtPassword = findViewById(R.id.edt_password_registerUser);
         edtNamaLengkap = findViewById(R.id.edt_namaLengkap_registerUser);
-        tvGoToLogin = findViewById(R.id.tv_goToLogin_registerAdmin);
+        TextView tvGoToLogin = findViewById(R.id.tv_goToLogin_registerAdmin);
 
         Button btnRegisterAdmin = findViewById(R.id.btn_register_admin);
 
@@ -77,6 +77,8 @@ public class AdminRegisterActivity extends AppCompatActivity implements IUserReg
     public void onRegisterSuccess(String message) {
         Toasty.success(this, message, Toasty.LENGTH_SHORT).show();
         adminDAO.insertAdmin(admin);
+        Intent intent = new Intent(AdminRegisterActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -103,8 +105,8 @@ public class AdminRegisterActivity extends AppCompatActivity implements IUserReg
     }
 
     private void setToNull() {
-        edtUsername.getEditText().setText("");
-        edtNamaLengkap.getEditText().setText("");
-        edtPassword.getEditText().setText("");
+        edtUsername.getEditText().setText(zeroData);
+        edtNamaLengkap.getEditText().setText(zeroData);
+        edtPassword.getEditText().setText(zeroData);
     }
 }
